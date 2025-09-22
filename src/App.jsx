@@ -1,15 +1,18 @@
-import {BrowserRouter,Route,Routes} from "react-router-dom"
+import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
 import './App.css'
+import Auth from "./pages/auth/Auth"
+import Tracker from "./pages/expense-track/Tracker"
 
 function App() {
 
   return (
     
-    <BrowserRouter>
+    <Router>
     <Routes>
-   
+   <Route path="/"  element={<Auth/>}/>
+   <Route path="/tracker" element={<Tracker/>}/>
   </Routes>
-    </BrowserRouter>
+    </Router>
   )
 }
 
